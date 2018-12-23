@@ -1,21 +1,21 @@
 {
-  "name": "aws-dynamodb-object-converter",
+  "name": "aws-dynamodb-standalone-unmarshaller",
   "version": "0.0.1",
   "description": "Package that removes attribute types (i.e. S for string) from object returned from DynamoDB function call",
-  "main": "Converter.js",
+  "main": "Unmarshaller.js",
   "scripts": {
     "test": "mocha"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/scottenriquez/aws-dynamodb-object-converter.git"
+    "url": "git+https://github.com/scottenriquez/aws-dynamodb-standalone-unmarshaller.git"
   },
   "author": "Scott Enriquez",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/scottenriquez/aws-dynamodb-object-converter/issues"
+    "url": "https://github.com/scottenriquez/aws-dynamodb-standalone-unmarshaller/issues"
   },
-  "homepage": "https://github.com/scottenriquez/aws-dynamodb-object-converter#readme",
+  "homepage": "https://github.com/scottenriquez/aws-dynamodb-standalone-unmarshaller#readme",
   "dependencies": {},
   "devDependencies": {
     "chai": "^4.2.0",

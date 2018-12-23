@@ -1,7 +1,16 @@
+/**
+ * @param input [object] marshalled object
+ * @returns {*} unmarshalled object
+ */
 output = (input) => {
     return unmarshall({'M': input});
 };
 
+/**
+ * @api private
+ * @param input [object] marshalled object
+ * @returns {*} unmarshalled object
+ */
 unmarshall = (input) => {
     let list, map, index;
     for (let type in input) {
@@ -59,6 +68,11 @@ unmarshall = (input) => {
     }
 };
 
+/**
+ * @api private
+ * @param number [String]
+ * @returns {number}
+ */
 convertNumber = (number) => {
     return Number(number);
 };
