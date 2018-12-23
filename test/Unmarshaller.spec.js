@@ -1,7 +1,7 @@
 const expect = require('chai').expect;
-const converter = require('../Converter');
+const unmarshaller = require('../Unmarshaller');
 
-describe('converter', () => {
+describe('unmarshaller', () => {
     it('should remove string type properties', () => {
         //arrange
         const inputDynamoDBObject = {
@@ -22,7 +22,7 @@ describe('converter', () => {
         };
 
         //act
-        const actualOutput = converter.output(inputDynamoDBObject);
+        const actualOutput = unmarshaller.output(inputDynamoDBObject);
         console.log(actualOutput);
         console.log(expectedOutput);
 

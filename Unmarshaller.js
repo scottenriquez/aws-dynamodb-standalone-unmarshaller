@@ -1,22 +1,22 @@
 output = (input) => {
-    return convertDynamoDBResponseObject({'M': input});
+    return unmarshall({'M': input});
 };
 
-convertDynamoDBResponseObject = (input) => {
+unmarshall = (input) => {
     let list, map, index;
     for (let type in input) {
         const values = input[type];
         if (type === 'M') {
             map = {};
             for (let key in values) {
-                map[key] = convertDynamoDBResponseObject(values[key]);
+                map[key] = unmarshall(values[key]);
             }
             return map;
         }
         else if (type === 'L') {
             list = [];
             for (index = 0; index < values.length; index++) {
-                list.push(convertDynamoDBResponseObject(values[index]));
+                list.push(unmarshall(values[index]));
             }
             return list;
         }
