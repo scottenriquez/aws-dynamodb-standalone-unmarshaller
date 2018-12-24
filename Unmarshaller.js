@@ -46,7 +46,7 @@ unmarshall = (input) => {
         else if (type === 'BS') {
             list = [];
             for (index = 0; index < values.length; index++) {
-                list.push(new Buffer(values[index]));
+                list.push(Buffer.from(values[index]));
             }
             return list;
         }
@@ -57,7 +57,7 @@ unmarshall = (input) => {
             return convertNumber(values);
         }
         else if (type === 'B') {
-            return Buffer(values);
+            return Buffer.from(values);
         }
         else if (type === 'BOOL') {
             return (values === 'true' || values === 'TRUE' || values === true);
